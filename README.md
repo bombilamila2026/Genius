@@ -46,7 +46,6 @@
 		<h1 style="color: blueviolet;">Торт на ужин</h1>
 	</section>
 </main>
-<!DOCTYPE html>
 <html lang="ru">
 
 <head>
