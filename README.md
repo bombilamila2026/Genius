@@ -1,253 +1,636 @@
-!doctype html>
-<html lang="en">
 
-<head>
-	<meta charset="UTF-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<title>Document</title>
-</head>
-<section>
-	<h1 style="background-color: blueviolet;
-               color: white;
-               border: 3px solid black;">
-		Воды сегодня нет
-	</h1>
-</section>
-<style>
-	link rel
-</style>
-
-<body>
-	Привет, Костя и Арина. Оля
-</body>
-<iframe
-	src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d42451.66354588046!2d35.478200259706604!3d48.31767867171964!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40dc02b70ecaa0a7%3A0x78f8232871025dc!2z0KHQuNC90LXQu9GM0L3QuNC60L7QstC-LCDQlNC90LXQv9GA0L7Qv9C10YLRgNC-0LLRgdC60LDRjyDQvtCx0LvQsNGB0YLRjA!5e0!3m2!1sru!2sua!4v1795011191650!5m2!1sru!2sua"
-	width="600" height="450" style="border: 0" allowfullscreen="" loading="lazy"
-	referrerpolicy="strict-origin-when-cross-origin"></iframe>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/gyZSCqWpatg?si=OOU2v2v_9gDkt8Y6"
-	title="YouTube video player" frameborder="0"
-	allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-	referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
-</iframe>
-
-<body>
-	<audio controls source src="./Дорога к мечте.mp3"></audio>
-</body>
-<main>
-	<a href="#contacts">Контакты</a>
-
-	<section id="contacts">
-		<h2>Мои контакты</h2>
-		<p>Телефон: +380 00 000 00 00</p>
-		<p>Email: example@gmail.com</p>
-		<p>Telegram: @example</p>
-	</section>
-	<section>
-		<h1 style="color: blueviolet;">Торт на ужин</h1>
-	</section>
-</main>
+<!DOCTYPE html>
 <html lang="ru">
 
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Оформление заказа</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мой магазин обуви</title>
 
-	<style>
-		body {
-			font-family: Arial, sans-serif;
-			background-color: #f2f2f2;
-			padding: 20px;
-		}
+    <style>
+        * {
+            box-sizing: border-box;
+        }
 
-		.order-form {
-			max-width: 500px;
-			margin: auto;
-			background-color: white;
-			padding: 20px;
-			border: 2px solid blueviolet;
-			border-radius: 12px;
-		}
+        body {
+            font-family: Arial, sans-serif;
+            background: #f2f2f2;
+            margin: 0;
+            padding: 20px;
+        }
 
-		h1 {
-			text-align: center;
-			color: blueviolet;
-		}
+        header {
+            background: blueviolet;
+            color: white;
+            padding: 25px;
+            text-align: center;
+            border-radius: 12px;
+            margin-bottom: 25px;
+        }
 
-		label {
-			display: block;
-			margin-top: 15px;
-			font-weight: bold;
-		}
+        .admin-panel {
+            max-width: 600px;
+            margin: 0 auto 30px;
+            background: white;
+            padding: 25px;
+            border: 2px solid blueviolet;
+            border-radius: 12px;
+        }
 
-		input,
-		select,
-		textarea {
-			width: 100%;
-			box-sizing: border-box;
-			padding: 10px;
-			margin-top: 5px;
-			border: 1px solid #aaa;
-			border-radius: 6px;
-			font-size: 16px;
-		}
+        h2 {
+            color: blueviolet;
+            text-align: center;
+        }
 
-		button {
-			width: 100%;
-			padding: 12px;
-			margin-top: 20px;
-			background-color: blueviolet;
-			color: white;
-			border: none;
-			border-radius: 6px;
-			font-size: 17px;
-			cursor: pointer;
-		}
+        label {
+            display: block;
+            margin-top: 15px;
+            font-weight: bold;
+        }
 
-		button:hover {
-			background-color: purple;
-		}
+        input, select, textarea {
+            width: 100%;
+            padding: 12px;
+            margin-top: 6px;
+            border: 1px solid #aaa;
+            border-radius: 6px;
+            font-size: 16px;
+        }
 
-		.order-result {
-			max-width: 500px;
-			margin: 25px auto;
-			padding: 20px;
-			background-color: #eee5ff;
-			border: 3px solid blueviolet;
-			border-radius: 12px;
-			display: none;
-		}
+        input:focus, textarea:focus, select:focus {
+            outline: none;
+            border: 2px solid blueviolet;
+        }
 
-		.order-result h2 {
-			color: blueviolet;
-		}
+        button {
+            padding: 12px;
+            border: none;
+            border-radius: 6px;
+            background: blueviolet;
+            color: white;
+            font-size: 15px;
+            cursor: pointer;
+        }
 
-		/* Подсветка полей при наведении мышкой */
-		input:hover,
-		select:hover,
-		textarea:hover {
-			background-color: #f0e5ff;
-			border: 1px solid blueviolet;
-		}
+        button:hover {
+            background: purple;
+        }
 
-		/* Подсветка поля при нажатии */
-		input:focus,
-		select:focus,
-		textarea:focus {
-			background-color: #eee0ff;
-			border: 2px solid blueviolet;
-			outline: none;
-		}
+        .save-button {
+            width: 100%;
+            margin-top: 20px;
+        }
 
-		/* Цвет текста, который вводит покупатель */
-		input,
-		select,
-		textarea {
-			color: #4b237a;
-			transition: 0.3s;
-		}
+        .cancel-button {
+            width: 100%;
+            margin-top: 10px;
+            background: gray;
+        }
 
-		/* Цвет подсказок внутри пустых полей */
-		input::placeholder,
-		textarea::placeholder {
-			color: #999999;
-		}
-	</style>
+        .catalog {
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .catalog h2 {
+            margin-bottom: 20px;
+        }
+
+        .products {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 20px;
+        }
+
+        .product-card {
+            background: white;
+            padding: 15px;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px #00000015;
+        }
+
+        .product-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: contain;
+            background: #f7f7f7;
+            border-radius: 8px;
+        }
+
+        .product-card h3 {
+            margin-bottom: 8px;
+        }
+
+        .price {
+            color: blueviolet;
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        .description {
+            color: #555;
+            line-height: 1.5;
+        }
+
+        .sizes {
+            color: #444;
+            font-size: 14px;
+        }
+
+        .actions {
+            display: flex;
+            gap: 8px;
+            margin-top: 15px;
+        }
+
+        .actions button {
+            flex: 1;
+        }
+
+        .delete-button {
+            background: #d32f2f;
+        }
+
+        .delete-button:hover {
+            background: #a50000;
+        }
+
+        .search {
+            max-width: 600px;
+            margin: 0 auto 25px;
+        }
+
+        .empty {
+            text-align: center;
+            color: #777;
+            padding: 30px;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        @media (max-width: 500px) {
+            body {
+                padding: 10px;
+            }
+
+            .products {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+                gap: 10px;
+            }
+
+            .product-card {
+                padding: 10px;
+            }
+
+            .product-card img {
+                height: 140px;
+            }
+
+            .actions {
+                flex-direction: column;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
-	<div class="order-form">
+    <header>
+        <h1>Мой магазин обуви</h1>
+        <p>Каталог товаров</p>
+    </header>
 
-		<h1>Оформление заказа</h1>
+    <!-- ФОРМА ДОБАВЛЕНИЯ ТОВАРА -->
 
-		<form id="orderForm">
+    <div class="admin-panel">
 
-			<label>Фамилия:</label>
-			<input type="text" id="surname" required>
+        <h2 id="formTitle">Добавить товар</h2>
 
-			<label>Имя:</label>
-			<input type="text" id="name" required>
+        <form id="productForm">
 
-			<label>Телефон:</label>
-			<input type="tel" id="phone" placeholder="+380..." required>
+            <label>Название товара:</label>
+            <input type="text" id="productName"
+                   placeholder="Например: Кроссовки Nike"
+                   required>
 
-			<label>Служба доставки:</label>
-			<select id="delivery" required>
-				<option value="">Выберите доставку</option>
-				<option value="Новая почта">Новая почта</option>
-				<option value="Укрпочта">Укрпочта</option>
-			</select>
+            <label>Категория:</label>
+            <select id="category" required>
+                <option value="">Выберите категорию</option>
+                <option>Мужская обувь</option>
+                <option>Женская обувь</option>
+                <option>Детская обувь</option>
+                <option>Кроссовки</option>
+                <option>Ботинки</option>
+                <option>Туфли</option>
+                <option>Одежда</option>
+                <option>Другое</option>
+            </select>
 
-			<label>Город:</label>
-			<input type="text" id="city" required>
+            <label>Цена (грн):</label>
+            <input type="number" id="productPrice"
+                   min="0" step="0.01"
+                   placeholder="1899"
+                   required>
 
-			<label>Отделение или почтовый индекс:</label>
-			<input type="text" id="branch" required placeholder="Номер отделения или индекс">
+            <label>Размеры:</label>
+            <input type="text" id="productSizes"
+                   placeholder="Например: 40, 41, 42, 43">
 
-			<label>Адрес доставки (улица, дом):</label>
-			<input type="text" id="address" placeholder="Если требуется">
+            <label>Описание товара:</label>
+            <textarea id="productDescription"
+                      rows="4"
+                      placeholder="Опишите товар..."></textarea>
 
-			<label>Дополнительная заметка:</label>
-			<textarea id="note" rows="4" placeholder="Ваши пожелания..."></textarea>
+            <label>Фотография товара:</label>
+            <input type="file" id="productImage"
+                   accept="image/*">
 
-			<button type="submit">Оформить заказ</button>
+            <label>Или ссылка на фотографию:</label>
+            <input type="url" id="imageUrl"
+                   placeholder="https://example.com/photo.jpg">
 
-		</form>
-	</div>
+            <button type="submit" class="save-button"
+                    id="saveButton">
+                Добавить товар
+            </button>
 
-	<div class="order-result" id="orderResult">
+            <button type="button"
+                    class="cancel-button hidden"
+                    id="cancelButton">
+                Отменить редактирование
+            </button>
 
-		<h2>Ваш заказ</h2>
+        </form>
 
-		<p><b>Фамилия:</b> <span id="resultSurname"></span></p>
-		<p><b>Имя:</b> <span id="resultName"></span></p>
-		<p><b>Телефон:</b> <span id="resultPhone"></span></p>
-		<p><b>Доставка:</b> <span id="resultDelivery"></span></p>
-		<p><b>Город:</b> <span id="resultCity"></span></p>
-		<p><b>Отделение / индекс:</b> <span id="resultBranch"></span></p>
-		<p><b>Адрес:</b> <span id="resultAddress"></span></p>
-		<p><b>Заметка:</b> <span id="resultNote"></span></p>
+    </div>
 
-	</div>
+    <!-- ПОИСК ТОВАРОВ -->
 
-	<script>
-		document.getElementById("orderForm")
-			.addEventListener("submit", function (event) {
+    <div class="search">
+        <input type="search" id="searchInput"
+               placeholder="Поиск товара по названию...">
+    </div>
 
-				event.preventDefault();
+    <!-- КАТАЛОГ -->
 
-				document.getElementById("resultSurname").textContent =
-					document.getElementById("surname").value;
+    <main class="catalog">
 
-				document.getElementById("resultName").textContent =
-					document.getElementById("name").value;
+        <h2>Наши товары</h2>
 
-				document.getElementById("resultPhone").textContent =
-					document.getElementById("phone").value;
+        <div class="products" id="products">
 
-				document.getElementById("resultDelivery").textContent =
-					document.getElementById("delivery").value;
+        </div>
 
-				document.getElementById("resultCity").textContent =
-					document.getElementById("city").value;
+        <p class="empty hidden" id="emptyMessage">
+            Товаров пока нет. Добавьте первый товар!
+        </p>
 
-				document.getElementById("resultBranch").textContent =
-					document.getElementById("branch").value;
+    </main>
 
-				document.getElementById("resultAddress").textContent =
-					document.getElementById("address").value || "Не указан";
+    <script>
 
-				document.getElementById("resultNote").textContent =
-					document.getElementById("note").value || "Нет заметки";
+        // БАЗА ДАННЫХ ТОВАРОВ В БРАУЗЕРЕ
 
-				document.getElementById("orderResult").style.display = "block";
+        let db;
 
-			});
-	</script>
+        const request = indexedDB.open("ShoeStore", 1);
+
+        request.onupgradeneeded = function(event) {
+            db = event.target.result;
+
+            if (!db.objectStoreNames.contains("products")) {
+                db.createObjectStore("products", {
+                    keyPath: "id",
+                    autoIncrement: true
+                });
+            }
+        };
+
+        request.onsuccess = function(event) {
+            db = event.target.result;
+            loadProducts();
+        };
+
+        request.onerror = function() {
+            alert("Ошибка открытия базы данных!");
+        };
+
+
+        // СОХРАНЕНИЕ ТОВАРА
+
+        const form = document.getElementById("productForm");
+
+        let editingId = null;
+
+        form.addEventListener("submit", async function(event) {
+
+            event.preventDefault();
+
+            const name = document.getElementById("productName").value.trim();
+            const category = document.getElementById("category").value;
+            const price = Number(document.getElementById("productPrice").value);
+            const sizes = document.getElementById("productSizes").value;
+            const description = document.getElementById("productDescription").value;
+
+            if (!name || !category || price < 0 || !Number.isFinite(price)) {
+                alert("Проверьте заполнение полей!");
+                return;
+            }
+
+            let image = document.getElementById("imageUrl").value.trim();
+
+            const file = document.getElementById("productImage").files[0];
+
+            if (file) {
+
+                if (!file.type.startsWith("image/")) {
+                    alert("Выберите файл изображения!");
+                    return;
+                }
+
+                if (file.size > 3 * 1024 * 1024) {
+                    alert("Размер фотографии не должен превышать 3 МБ!");
+                    return;
+                }
+
+                image = await new Promise((resolve, reject) => {
+
+                    const reader = new FileReader();
+
+                    reader.onload = () => resolve(reader.result);
+                    reader.onerror = reject;
+
+                    reader.readAsDataURL(file);
+
+                });
+            }
+
+            if (editingId !== null && !image) {
+                const oldProduct = await getProduct(editingId);
+                image = oldProduct?.image || "";
+            }
+
+            const product = {
+                name,
+                category,
+                price,
+                sizes,
+                description,
+                image
+            };
+
+            if (editingId !== null) {
+
+                product.id = editingId;
+
+                const transaction = db.transaction(["products"], "readwrite");
+
+                transaction.objectStore("products").put(product);
+
+                transaction.oncomplete = function() {
+                    resetForm();
+                    loadProducts();
+                    alert("Товар успешно изменён!");
+                };
+
+            } else {
+
+                const transaction = db.transaction(["products"], "readwrite");
+
+                transaction.objectStore("products").add(product);
+
+                transaction.oncomplete = function() {
+                    resetForm();
+                    loadProducts();
+                    alert("Товар успешно добавлен!");
+                };
+
+            }
+
+        });
+
+
+        // ПОЛУЧЕНИЕ ОДНОГО ТОВАРА
+
+        function getProduct(id) {
+
+            return new Promise((resolve, reject) => {
+
+                const transaction = db.transaction(["products"], "readonly");
+
+                const request = transaction.objectStore("products").get(id);
+
+                request.onsuccess = () => resolve(request.result);
+                request.onerror = () => reject(request.error);
+
+            });
+
+        }
+
+
+        // ЗАГРУЗКА ВСЕХ ТОВАРОВ
+
+        function loadProducts() {
+
+            const transaction = db.transaction(["products"], "readonly");
+
+            const request = transaction.objectStore("products").getAll();
+
+            request.onsuccess = function() {
+
+                const products = request.result;
+
+                displayProducts(products);
+
+            };
+
+        }
+
+
+        // ОТОБРАЖЕНИЕ КАРТОЧЕК
+
+        function displayProducts(products) {
+
+            const container = document.getElementById("products");
+
+            container.innerHTML = "";
+
+            document.getElementById("emptyMessage").classList.toggle(
+                "hidden", products.length > 0
+            );
+
+            products.forEach(product => {
+
+                const card = document.createElement("div");
+
+                card.className = "product-card";
+
+                const img = document.createElement("img");
+
+                img.src = product.image || "https://placehold.co/400x300?text=No+Photo";
+                img.alt = product.name;
+
+                img.onerror = function() {
+                    this.src = "https://placehold.co/400x300?text=No+Photo";
+                };
+
+                const title = document.createElement("h3");
+                title.textContent = product.name;
+
+                const category = document.createElement("p");
+                category.textContent = product.category;
+
+                const price = document.createElement("p");
+                price.className = "price";
+                price.textContent = product.price + " грн";
+
+                const sizes = document.createElement("p");
+                sizes.className = "sizes";
+                sizes.textContent = "Размеры: " + (product.sizes || "Не указаны");
+
+                const description = document.createElement("p");
+                description.className = "description";
+                description.textContent = product.description;
+
+                const actions = document.createElement("div");
+                actions.className = "actions";
+
+                const editButton = document.createElement("button");
+                editButton.textContent = "Изменить";
+                editButton.onclick = () => editProduct(product.id);
+
+                const deleteButton = document.createElement("button");
+                deleteButton.textContent = "Удалить";
+                deleteButton.className = "delete-button";
+                deleteButton.onclick = () => deleteProduct(product.id);
+
+                actions.append(editButton, deleteButton);
+
+                card.append(
+                    img,
+                    title,
+                    category,
+                    price,
+                    sizes,
+                    description,
+                    actions
+                );
+
+                container.appendChild(card);
+
+            });
+
+            filterProducts();
+
+        }
+
+
+        // РЕДАКТИРОВАНИЕ ТОВАРА
+
+        async function editProduct(id) {
+
+            const product = await getProduct(id);
+
+            if (!product) return;
+
+            editingId = id;
+
+            document.getElementById("productName").value = product.name;
+            document.getElementById("category").value = product.category;
+            document.getElementById("productPrice").value = product.price;
+            document.getElementById("productSizes").value = product.sizes;
+            document.getElementById("productDescription").value = product.description;
+
+            document.getElementById("imageUrl").value =
+                product.image && product.image.startsWith("http")
+                    ? product.image : "";
+
+            document.getElementById("formTitle").textContent = "Редактировать товар";
+
+            document.getElementById("saveButton").textContent = "Сохранить изменения";
+
+            document.getElementById("cancelButton").classList.remove("hidden");
+
+            document.getElementById("productForm").scrollIntoView({
+                behavior: "smooth"
+            });
+
+        }
+
+
+        // УДАЛЕНИЕ ТОВАРА
+
+        function deleteProduct(id) {
+
+            if (!confirm("Вы действительно хотите удалить этот товар?")) {
+                return;
+            }
+
+            const transaction = db.transaction(["products"], "readwrite");
+
+            transaction.objectStore("products").delete(id);
+
+            transaction.oncomplete = function() {
+                loadProducts();
+            };
+
+        }
+
+
+        // ОЧИСТКА ФОРМЫ
+
+        function resetForm() {
+
+            form.reset();
+
+            editingId = null;
+
+            document.getElementById("formTitle").textContent = "Добавить товар";
+
+            document.getElementById("saveButton").textContent = "Добавить товар";
+
+            document.getElementById("cancelButton").classList.add("hidden");
+
+        }
+
+        document.getElementById("cancelButton").onclick = resetForm;
+
+
+        // ПОИСК ТОВАРОВ
+
+        document.getElementById("searchInput").addEventListener(
+            "input", filterProducts
+        );
+
+        function filterProducts() {
+
+            const search = document.getElementById("searchInput")
+                .value.toLowerCase();
+
+            const cards = document.querySelectorAll(".product-card");
+
+            let visible = 0;
+
+            cards.forEach(card => {
+
+                const matches = card.textContent.toLowerCase().includes(search);
+
+                card.style.display = matches ? "" : "none";
+
+                if (matches) visible++;
+
+            });
+
+            document.getElementById("emptyMessage").classList.toggle(
+                "hidden", visible > 0
+            );
+
+        }
+
+    </script>
 
 </body>
-
 </html>
 
-</html>
